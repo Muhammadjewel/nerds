@@ -79,7 +79,13 @@ img {
 .logo__img {
   display: block;
 }
-/* Sitenav list */
+/* Sitenav menu */
+.sitenav__menu {
+  margin-right: auto;
+}
+.sitenav__menu-toggler {
+  display: none;
+}
 .sitenav__list {
   display: flex;
   flex-wrap: wrap;
@@ -87,7 +93,6 @@ img {
   align-items: center;
   padding: 0;
   margin: 0;
-  margin-right: auto;
   list-style-type: none;
 }
 .sitenav__item {
@@ -164,12 +169,90 @@ img {
   .sitenav__logo {
     margin-right: 50px;
   }
-  .sitenav__list {
+  .sitenav__menu {
     margin-right: 0;
   }
 }
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 880px) {
   .sitenav {
     padding-top: 20px;
+  }
+  .logo__img {
+    height: 50px;
+    width: auto;
+  }
+  .sitenav__menu {
+    position: relative;
+    z-index: 2;
+    order: 1;
+    margin-left: 40px;
+  }
+  .sitenav__menu-toggler {
+    display: block;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .sitenav__menu-toggler:hover {
+    border-color: #fb565a;
+    color: #fb565a;
+  }
+  .sitenav__menu-toggler:active {
+    border-color: #000;
+    color: #000;
+    opacity: 0.3;
+  }
+  .sitenav__list {
+    display: none;
+  }
+  .sitenav__list--open {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 0;
+    padding: 20px;
+    background-color: #fff;
+    text-align: right;
+    box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .sitenav__item:not(:first-child) {
+    margin-left: 0;
+  }
+  .sitenav__item--active::after {
+    display: none;
+  }
+  .sitenav__item--active .sitenav__link {
+    color: #fb565a;
+  }
+  .sitenav__item--active .sitenav__link:active {
+    color: #000;
+    opacity: 0.3;
+  }
+  .sitenav__shopping-cart-link {
+    margin-left: auto;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .sitenav__menu {
+    margin-left: 20px;
+  }
+  .sitenav__list {
+    position: fixed;
+    top: 90px;
+    left: 0;    
+    width: 100%;
+  }
+  .shopping-cart-link {
+    flex-shrink: 0;
+  }
+  .shopping-cart-link__icon {
+    width: 25px;
+    height: 25px;
+  }
+  .shopping-cart-link__text {
+    display: none;
   }
 }
