@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nerds</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="node_modules/tiny-slider/dist/tiny-slider.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -87,11 +88,24 @@
           </div>
         </li>
       </ul>
+
+      <div class="promo-slider__nav">
+        <button class="promo-slider__nav-item" type="button">
+          <span class="visually-hidden">Слайд №1</span>
+        </button>
+        <button class="promo-slider__nav-item" type="button">
+          <span class="visually-hidden">Слайд №2</span>
+        </button>
+        <button class="promo-slider__nav-item" type="button">
+          <span class="visually-hidden">Слайд №3</span>
+        </button>
+      </div>
     </section>
 
   </main>
 
 
+  <script src="node_modules/tiny-slider/dist/min/tiny-slider.js"></script>
   <script src="js/main.js"></script>  
 </body>
 </html>
