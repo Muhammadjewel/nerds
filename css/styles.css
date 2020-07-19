@@ -234,6 +234,24 @@ img {
   margin-top: 0;
   margin-bottom: 35px;
 }
+/* Retina screen media query */
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+  .promo-slide__container--design {
+    background-image: url("../img/slide1@2x.png");
+  }
+  .promo-slide__container--precision {
+    background-image: url("../img/slide2@2x.png");
+  }
+  .promo-slide__container--night {
+    background-image: url("../img/slide3@2x.png");
+  }
+}
 /* Media queries */
 @media only screen and (max-width: 1050px) {
   .sitenav__container {
