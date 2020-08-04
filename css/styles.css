@@ -389,6 +389,9 @@ img {
   text-transform: uppercase;
   text-align: center;
 }
+.stats__table {
+  width: 100%;
+}
 .stats__table tbody {
   display: flex;
   flex-direction: column-reverse;
@@ -441,6 +444,14 @@ img {
   }
   .sitenav__menu {
     margin-right: 0;
+  }
+}
+@media only screen and (max-width: 1075px) {
+  .about {
+    width: 60%;
+  }
+  .stats {
+    width: 35%;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -545,6 +556,21 @@ img {
   .promo-slide__heading {
     font-size: 40px;
   }
+  .about,
+  .stats {
+    width: 100%;
+    text-align: center;
+  }
+  .about {
+    margin-bottom: 40px;
+  }
+  .stats__motto {
+    margin-bottom: 30px;
+  }
+  .stats__table th {
+    padding: 5px;
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 780px) {
   .service:last-child {
@@ -586,5 +612,26 @@ img {
   .promo-slide__heading {
     font-size: 28px;
     line-height: 1.2;
+  }
+  .about__heading {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .about__orders li {
+    display: block;
+    text-align: left;
+  }
+  .about__orders li::before {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .stats__table td {
+    padding-bottom: 10px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .stats__table sup {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
