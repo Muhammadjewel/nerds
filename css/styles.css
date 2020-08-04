@@ -303,6 +303,9 @@ img {
   .sitenav {
     padding-top: 20px;
   }
+  .sitenav--list-open {
+    background-color: #fff;
+  }
   .logo__img {
     height: 50px;
     width: auto;
