@@ -570,6 +570,7 @@ img {
   .stats__table th {
     padding: 5px;
     text-align: center;
+    word-break: break-word;
   }
 }
 @media only screen and (max-width: 780px) {
