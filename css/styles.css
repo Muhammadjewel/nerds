@@ -478,22 +478,24 @@ img {
   position: relative;
   z-index: 1;
   height: 415px;
+  padding: 54px 0;
 }
-.location__container {
-  position: relative;
-  z-index: 1;
-}
-.location__iframe {
+.location__map-link {
+  display: block;
   position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.location__map-image {
+  display: block;
   width: 100%;
   height: 415px;
-  border: none;
 }
 .location__inner {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  top: 54px;
-  left: 0;
   width: 319px;
   padding: 47px 50px;
   background-color: #fff;
@@ -526,8 +528,8 @@ img {
 .location__pin {
   position: absolute;
   z-index: 1;
-  left: 703px;
-  top: 40px;
+  left: 56.82%;
+  top: 20.48%;
 }
 /* Retina screen media query */
 @media
