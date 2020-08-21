@@ -487,11 +487,17 @@ img {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
 }
 .location__map-image {
   display: block;
   width: 100%;
   height: 415px;
+  object-fit: cover;
+  object-position: center center;
+}
+.location__map-text {
+  display: none;
 }
 .location__inner {
   position: relative;
@@ -528,7 +534,7 @@ img {
 .location__pin {
   position: absolute;
   z-index: 1;
-  left: 56.82%;
+  left: 57.82%;
   top: 20.48%;
 }
 /* Retina screen media query */
@@ -559,6 +565,9 @@ img {
   }
   .sitenav__menu {
     margin-right: 0;
+  }
+  .location__pin {
+    left: 60%;
   }
 }
 @media only screen and (max-width: 1075px) {
@@ -697,10 +706,16 @@ img {
     text-align: center;
     word-break: break-word;
   }
+  .location__pin {
+    left: 62%;
+  }
 }
 @media only screen and (max-width: 780px) {
   .service:last-child {
     margin-bottom: 0;
+  }
+  .location__pin {
+    left: 64%;
   }
 }
 @media only screen and (max-width: 650px) {
@@ -712,6 +727,30 @@ img {
   }
   .project {
     width: 50%;
+  }
+  .location {
+    height: auto;
+    background-color: #eee;
+    text-align: center;
+  }
+  .location__inner {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .location__map-link {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-bottom: 40px;
+    color: #fb565a;
+  }
+  .location__map-text {
+    display: inline-block;
+  }
+  .location__map-image,
+  .location__pin {
+    display: none;
   }
 }
 @media only screen and (max-width: 550px) {
@@ -762,5 +801,12 @@ img {
   .stats__table sup {
     font-size: 20px;
     line-height: 20px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .location__inner {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
